@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <a href="#" onMouseOver="document.write('Hi, nice to see you!’)"> Over Here!</a>
-  <a href="#" onMouseOut="alert('Good try!')"> Get Out Here!</a>
-</html>
+<head>
+    <title>Mouse Events Example</title>
+</head>
+<body>
 
+    <p id="message">Hover over the link!</p>
+
+    <a href="#" id="hoverLink">Over Here!</a>
+    <a href="#" id="alertLink"> Get Out Here!</a>
+
+    <script>
+        document.getElementById("hoverLink").onmouseover = function() {
+            document.getElementById("message").innerHTML = "Hi, nice to see you!";
+        };
+
+        document.getElementById("alertLink").onmouseout = function() {
+            alert("Good try!");
+        };
+    </script>
+
+</body>
+</html>
